@@ -1,0 +1,140 @@
+#apt update
+#apt install git gh
+#git config --global user.name TheTangerineOwl
+#git config --global user.email salmontangerine@mail.ru
+#git config --global init.defaultBranch main
+#ssh-keygen -t ed25519 -f ~/.ssh/${MYUSER}
+#gh auth login
+#gh auth setup-git --hostname github.com
+#gh auth status
+#gh repo create --public eltexModule1
+#mkdir ~/eltexModule1 && cd ~/eltexModule1
+#echo "# Репозиторий для раздела 3 практики 2 модуля 1" >> README.md
+#git init
+Initialized empty Git repository in /root/eltexModule1/.git/
+#git add README.md
+#git commit -m "first commit"
+[main (root-commit) d6e66d3] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+#git branch -M main
+#git remote add origin https://github.com/TheTangerineOwl/eltexModule1.git
+#git status
+On branch main
+nothing to commit, working tree clean
+#git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 290 bytes | 290.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/TheTangerineOwl/eltexModule1.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+#mkdir -p module1/task1
+#mkdir -p module1/task2
+#mkdir -p module1/task3
+(с сервера 1 практики)
+#scp -vp report_part1.txt root@172.16.9.177:/root/eltexModule1/module1/task1/
+#scp -vp ${USER}_part.log root@172.16.9.177:/root/eltexModule1/module1/task2/
+#scp -vp ${USER}_part3.log root@172.16.9.177:/root/eltexModule1/module1/task3/
+#scp -vp ${USER{_part3_gt50M.new.log root@172.16.9.177:/root/eltexModule1/module1/task3
+#git add .
+#git status
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   module1/task1/report_part1.txt
+        new file:   module1/task2/eltex-pg1-v3_part.log
+        new file:   module1/task3/eltex-pg1-v3_part3.log
+        new file:   module1/task3/eltex-pg1-v3_part3_gt50M.new.log
+#git commit -m "Добавлены отчеты по 1 практике."
+[main 78579c6] Добавлены отчеты по 1 практике.
+ 4 files changed, 254 insertions(+)
+ create mode 100644 module1/task1/report_part1.txt
+ create mode 100644 module1/task2/eltex-pg1-v3_part.log
+ create mode 100644 module1/task3/eltex-pg1-v3_part3.log
+ create mode 100644 module1/task3/eltex-pg1-v3_part3_gt50M.new.log
+#git push
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (10/10), 2.97 KiB | 2.97 MiB/s, done.
+Total 10 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/TheTangerineOwl/eltexModule1.git
+   d6e66d3..78579c6  main -> main
+#mkdir ~/eltexModule1_clone && cd ~/eltexModule1_clone
+#git clone https://github.com/TheTangerineOwl/eltexModule1.git .
+ Cloning into '.'...
+remote: Enumerating objects: 13, done.
+remote: Counting objects: 100% (13/13), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 13 (delta 0), reused 13 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (13/13), done.
+#echo "Было добавлено $(date) в разделе 3 практики 2 для репозитория" >> ~/eltexModule1/module1/task1/report_part1.txt
+#cd ../eltexModule1
+#git add .
+#git commit -m "Был изменен report_part1.txt для задания в практике 2."
+[main 27238dd] Был изменен report_part1.txt для задания в практике 2.
+ 1 file changed, 1 insertion(+)
+#git push
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 695 bytes | 695.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/TheTangerineOwl/eltexModule1.git
+   78579c6..27238dd  main -> main
+#cd ../eltexModule1_clone/
+#git fetch
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 5 (delta 0), reused 5 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (5/5), 675 bytes | 675.00 KiB/s, done.
+From https://github.com/TheTangerineOwl/eltexModule1
+   78579c6..27238dd  main       -> origin/main
+#git log origin/main
+commit 27238dd76420d1e36c31d76e254aa93359fdbf43 (origin/main, origin/HEAD)
+Author: TheTangerineOwl <salmontangerine@mail.ru>
+Date:   Mon Jul 14 12:35:38 2025 +0000
+
+    Был изменен report_part1.txt для задания в практике 2.
+
+commit 78579c65b80f7b90abf18fad2b3da4375da06b66 (HEAD -> main)
+Author: TheTangerineOwl <salmontangerine@mail.ru>
+Date:   Mon Jul 14 12:27:19 2025 +0000
+
+    Добавлены отчеты по 1 практике.
+
+commit d6e66d3cdee0e311f4d095337c46d0508b0114ef
+Author: TheTangerineOwl <salmontangerine@mail.ru>
+Date:   Mon Jul 14 11:44:28 2025 +0000
+
+    first commit
+#git diff main origin/main
+diff --git a/module1/task1/report_part1.txt b/module1/task1/report_part1.txt
+index 831847e..68eb97d 100644
+--- a/module1/task1/report_part1.txt
++++ b/module1/task1/report_part1.txt
+@@ -1 +1,2 @@
+ Гомзякова Софья Александровна часть 1 модуля 1 успешно завершена 07.07.2025 11:24
++Было добавлено Mon Jul 14 12:33:22 PM UTC 2025 в разделе 3 практики 2 для репозитория
+#git merge
+Updating 78579c6..27238dd
+Fast-forward
+ module1/task1/report_part1.txt | 1 +
+ 1 file changed, 1 insertion(+)
+#cd ../eltexModule1
+#mkdir -p module2/task1
+#mkdir -p module2/task2
+#mkdir -p module2/task3
+#cp ~/practice2_${MYUSER}_part1.log module2/task1/practice2_${MYUSER}_part1.log
+#cp ~/practice2_${MYUSER}_part2.log module2/task2/practice2_${MYUSER}_part2.log
+#cp ~/practice2_${MYUSER}_part3.log module2/task3/practice2_${MYUSER}_part3.log
